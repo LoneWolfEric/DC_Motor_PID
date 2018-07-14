@@ -1658,7 +1658,7 @@ Image Symbol Table
     i.VisualScope                            0x08001766   Section        0  visualscope.o(i.VisualScope)
     i.Xianfu_Pwm                             0x080017e4   Section        0  controlloop.o(i.Xianfu_Pwm)
     i._sys_exit                              0x08001808   Section        0  usart.o(i._sys_exit)
-    i.bsp_Init                               0x0800180e   Section        0  bsp.o(i.bsp_Init)
+    i.bsp_Init                               0x0800180c   Section        0  bsp.o(i.bsp_Init)
     i.delay_init                             0x08001854   Section        0  delay.o(i.delay_init)
     i.delay_ms                               0x08001890   Section        0  delay.o(i.delay_ms)
     i.delay_xms                              0x080018c8   Section        0  delay.o(i.delay_xms)
@@ -1956,8 +1956,8 @@ Image Symbol Table
     UsageFault_Handler                       0x08001763   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
     VisualScope                              0x08001767   Thumb Code   126  visualscope.o(i.VisualScope)
     Xianfu_Pwm                               0x080017e5   Thumb Code    32  controlloop.o(i.Xianfu_Pwm)
-    _sys_exit                                0x08001809   Thumb Code     6  usart.o(i._sys_exit)
-    bsp_Init                                 0x0800180f   Thumb Code    70  bsp.o(i.bsp_Init)
+    _sys_exit                                0x08001809   Thumb Code     4  usart.o(i._sys_exit)
+    bsp_Init                                 0x0800180d   Thumb Code    70  bsp.o(i.bsp_Init)
     delay_init                               0x08001855   Thumb Code    52  delay.o(i.delay_init)
     delay_ms                                 0x08001891   Thumb Code    56  delay.o(i.delay_ms)
     delay_xms                                0x080018c9   Thumb Code    72  delay.o(i.delay_xms)
@@ -2155,8 +2155,9 @@ Memory Map of the image
     0x08001762   0x00000004   Code   RO          196    i.UsageFault_Handler  stm32f4xx_it.o
     0x08001766   0x0000007e   Code   RO         5468    i.VisualScope       visualscope.o
     0x080017e4   0x00000024   Code   RO         5282    i.Xianfu_Pwm        controlloop.o
-    0x08001808   0x00000006   Code   RO         5118    i._sys_exit         usart.o
-    0x0800180e   0x00000046   Code   RO         5259    i.bsp_Init          bsp.o
+    0x08001808   0x00000004   Code   RO         5118    i._sys_exit         usart.o
+    0x0800180c   0x00000046   Code   RO         5259    i.bsp_Init          bsp.o
+    0x08001852   0x00000002   PAD
     0x08001854   0x0000003c   Code   RO         5059    i.delay_init        delay.o
     0x08001890   0x00000038   Code   RO         5060    i.delay_ms          delay.o
     0x080018c8   0x0000004c   Code   RO         5062    i.delay_xms         delay.o
@@ -2204,32 +2205,32 @@ Image component sizes
 
        124         10          0          0          0        659   adc.o
         70          0          0          0          0        507   bsp.o
-       394         80          0         28          0       3329   controlloop.o
-       192         12          0          4          0       1904   delay.o
-       230         10          0          6          0       2026   encoder.o
+       394         80          0         28          0       3321   controlloop.o
+       192         12          0          4          0       1900   delay.o
+       230         10          0          6          0       2018   encoder.o
        104          4          0          0          0        555   led.o
-        56         10          0          0          0     295875   main.o
-       180         24          0          0          0       2049   misc.o
-        64         26        392          0       1536        832   startup_stm32f40_41xxx.o
-       264         12          0          0          0       1415   stepping_motor.o
-       176         24          0          0          0       3387   stm32f4xx_adc.o
-       222          0          0          0          0       2831   stm32f4xx_gpio.o
-        26          0          0          0          0       4010   stm32f4xx_it.o
+        56         10          0          0          0     295867   main.o
+       180         24          0          0          0       2041   misc.o
+        64         26        392          0       1536        836   startup_stm32f40_41xxx.o
+       264         12          0          0          0       1411   stepping_motor.o
+       176         24          0          0          0       3367   stm32f4xx_adc.o
+       222          0          0          0          0       2815   stm32f4xx_gpio.o
+        26          0          0          0          0       3990   stm32f4xx_it.o
         16          6          0          0          0        485   stm32f4xx_iwdg.o
-       360         42          0         16          0       5168   stm32f4xx_rcc.o
-      1038         38          0          0          0      15316   stm32f4xx_tim.o
-       438          8          0          0          0       5345   stm32f4xx_usart.o
-       340         32          0          0          0       1453   system_stm32f4xx.o
-       128         10          0          0          0       1129   timer.o
-       342         28          0          6        200       4236   usart.o
-       312         24          0          0          0       1345   usart2.o
-       420         46          0          2        200       3166   usart3.o
-       156          0          0          0          0       1806   visualscope.o
+       360         42          0         16          0       5144   stm32f4xx_rcc.o
+      1038         38          0          0          0      15268   stm32f4xx_tim.o
+       438          8          0          0          0       5337   stm32f4xx_usart.o
+       340         32          0          0          0       1449   system_stm32f4xx.o
+       128         10          0          0          0       1121   timer.o
+       340         28          0          6        200       4200   usart.o
+       312         24          0          0          0       1337   usart2.o
+       420         46          0          2        200       3158   usart3.o
+       156          0          0          0          0       1798   visualscope.o
 
     ----------------------------------------------------------------------
-      5676        446        424         64       1936     358828   Object Totals
+      5676        446        424         64       1936     358584   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        24          0          0          2          0          0   (incl. Padding)
+        26          0          0          2          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2287,8 +2288,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      6484        488        424         64       2032     351192   Grand Totals
-      6484        488        424         64       2032     351192   ELF Image Totals
+      6484        488        424         64       2032     351048   Grand Totals
+      6484        488        424         64       2032     351048   ELF Image Totals
       6484        488        424         64          0          0   ROM Totals
 
 ==============================================================================

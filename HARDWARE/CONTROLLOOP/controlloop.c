@@ -7,7 +7,7 @@ int set_pwm;
 void ControlLoop(void)
 {
 	encoder = TIM2_Encoder_Read();
-	set_pwm = Position_PID(encoder,4000);
+	set_pwm = Position_PID(encoder,15000);
 	//printf("set_pwm：%d\r\n", set_pwm);
 	Xianfu_Pwm();
 	Set_Pwm_And_Direction(set_pwm);
@@ -29,7 +29,7 @@ pwm代表输出
 **************************************************************************/
 int Position_PID (u16 Encoder,int Target)
 { 	
-	 float Position_KP=0.08,Position_KI=0.000001,Position_KD=0.05;
+	 float Position_KP = 0.14, Position_KI = 0.0000000000009, Position_KD = 0.74;
 	 static float Bias,Pwm,Integral_bias,Last_Bias;
 	 Bias=Encoder-Target;                                  //计算偏差
 	 Integral_bias+=Bias;	                                 //求出偏差的积分
